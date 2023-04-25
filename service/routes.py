@@ -64,6 +64,7 @@ def create_accounts():
 # ... place you code here to LIST accounts ...
 @app.route("/accounts", methods=["GET"])
 
+
 def list_accounts():
     """
     List all Accounts
@@ -82,6 +83,7 @@ def list_accounts():
 
 # ... place you code here to READ an account ...
 @app.route("/accounts/<int:account_id>", methods=["GET"])
+
 
 def get_accounts(account_id):
     """
@@ -102,6 +104,8 @@ def get_accounts(account_id):
 
 # ... place you code here to UPDATE an account ...
 @app.route("/accounts/<int:account_id>", methods=["PUT"])
+
+
 def update_accounts(account_id):
     """
     Update an Account
@@ -122,6 +126,8 @@ def update_accounts(account_id):
 
 # ... place you code here to DELETE an account ...
 @app.route("/accounts/<int:account_id>", methods=["DELETE"])
+
+
 def delete_accounts(account_id):
     """
     Delete an Account
@@ -140,6 +146,8 @@ def delete_accounts(account_id):
 
 
 def check_content_type(media_type):
+
+    
     """Checks that the media type is correct"""
     content_type = request.headers.get("Content-Type")
     if content_type and content_type == media_type:
